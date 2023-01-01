@@ -1,0 +1,34 @@
+#!/bin/bash
+
+help() {
+  echo "Usage:"
+  echo "  zmicro cloudreve <args ...>"
+  echo ""
+
+  cloudreve --help
+}
+
+version() {
+  # cloudreve --version
+  echo "v3.6.2"
+}
+
+core() {
+  case $1 in
+  -h | --help | help)
+    help
+    ;;
+  -v | --version | version)
+    version
+    ;;
+  *)
+    cloudreve "$@"
+    ;;
+  esac
+}
+
+run() {
+  core "$@"
+}
+
+run "$@"
