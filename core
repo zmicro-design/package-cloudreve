@@ -31,7 +31,7 @@ install() {
   #   https://github.com/cloudreve/Cloudreve/releases/download/3.6.2/cloudreve_3.6.2_linux_amd64.tar.gz
   #   https://github.com/cloudreve/Cloudreve/releases/download/3.6.2/cloudreve_3.6.2_linux_arm64.tar.gz
   # generate url
-  local url="${PACKAGE_CORE_RELEASE_DOWNLOAD}/$PACKAGE_CORE_VERSION/${name}-${PACKAGE_CORE_VERSION#v}-${platform}-${arch}.tar.gz"
+  local url="${PACKAGE_CORE_RELEASE_DOWNLOAD}/${PACKAGE_CORE_VERSION#v}/${name}_${PACKAGE_CORE_VERSION#v}_${platform}_${arch}.tar.gz"
   log::debug "[$(timestamp)][package][$name][$kernel][$arch] url: $url, file: ${tmp_file}, tmp_dir: $tmp_dir"
 
   # download
